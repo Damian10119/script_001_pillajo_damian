@@ -1,7 +1,7 @@
-.container {
+#container {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     background-color: blanchedalmond;
-    display: flex;
+    
 }
 
 
@@ -24,11 +24,23 @@
     transition: background-color 1s,transform 1s,border 1s;}
 
 .content:hover{
-    background-color: brown;
-    transform: translateY(-5px) translateX(5px) rotate(5deg);
-    border: 1px solid pink;
+    border-color: rgb(124, 67, 177);
 }
 
 .damian{
     background-color: rgb(11, 165, 114);
+}
+
+
+.fizz:hover{
+    background-color: rgb(208, 33, 33);
+}
+
+.buzz:hover{
+    transform: translateY(-5px);
+}
+
+.fizzbuzz:hover {
+    background-color: #0d5ec1;
+    transform: translateY(-5px) rotate(5deg); 
 }
