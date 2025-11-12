@@ -44,3 +44,61 @@
     background-color: #0d5ec1;
     transform: translateY(-5px) rotate(5deg); 
 }
+
+.controls {
+    background-color: rgb(204, 204, 107);
+    padding: 15px;
+    border-radius: 10px;
+    display: flex;
+    gap: 15px;
+
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+
+}
+
+.input-group label{
+    font-size: 12px;
+
+}
+
+.input-group input {
+    padding-left: 8px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+}
+
+.input-group input:focus {
+    outline: none;
+    border-color: rgb(22, 120, 120);
+}
+
+#generate {
+    background-color: rgb(5, 249, 58);
+    border: none;
+    padding-left: 16px;
+    padding-right: 16px;
+    border-radius: 5px;
+    font-size: 14px;
+    transition: background-color 0.5s, transform 0.4s;
+    
+}
+
+#generate:hover {
+    background-color: rgb(5, 204, 55);
+    font-weight: bold;
+}
+
+#generate:active{
+    transform: scale(0.8);
+}
+
+#matrix-container {
+    display: grid;
+    justify-content: center;
+    padding: 20px;
+}

@@ -5,13 +5,13 @@ function addClass(containerDiv,className){
 
 function fizz(divisor, square, number){
     
-    if(number%divisor==0){
+    if(divisor && number % divisor=== 0){
         addClass(square, "fizz")
     }
 }
 
 function buzz(divisor, square,number){
-    if(number % divisor == 0 ){
+    if(divisor && number % divisor === 0 ){
         addClass(square,"buzz")
     }
 }
@@ -32,7 +32,7 @@ function createMatrix(dimension, container, divisorfizz, divisorbuzz) {
         fizz(divisorfizz, content, counter);
         buzz(divisorbuzz, content, counter);
 
-        if (counter % divisorfizz === 0 && counter % divisorbuzz === 0) {
+        if (divisorfizz && divisorbuzz && counter % divisorfizz === 0 && counter % divisorbuzz === 0) {
             addClass(content, "fizzbuzz");
         }
 
@@ -41,12 +41,26 @@ function createMatrix(dimension, container, divisorfizz, divisorbuzz) {
     }
 }
 
+function bottonClicked(){
+    console.log("Hiciste click")
 
+    const dimensionInput = document.getElementById("dimension")
+    const fizzInput = document.getElementById("fizz-divisor")
+    const buzzInput = document.getElementById("buzz-divisor")
+
+    const dimensionValue = parseInt(dimensionInput.value)
+    const fizzValue = parseInt(fizzInput.value)
+    const buzzValue = parseInt(buzzInput.value)
+
+    const container= document.getElementById("matrix-container")
+    createMatrix(dimensionValue,container,fizzValue,buzzValue)
+}
 
 document.addEventListener("DOMContentLoaded", function(){
-    const container= document.getElementById("container")
-    const dimension = 3
-    createMatrix(dimension,container,2,3)
+    
 
+    const btnGenerate= document.getElementById("generate")
+
+    btnGenerate.addEventListener("click", bottonClicked)
 
 })

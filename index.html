@@ -10,6 +10,38 @@
 <body>
     <main id = "container">
 
+        <h1>FIZZ-BUZZ</h1>
+
+        <div class="controls" id="controls">
+
+            <div class="input-group">
+                <label for="dimension">Dimension (n*n)</label>
+                <input type="number" id="dimension" value="20" min="1" max="30"> 
+
+            </div>
+
+            <div class="input-group">
+                <label for="fizz-divisor">Fizz Divsor</label>
+                <input type="number" id="fizz-divisor" value="20" min="1" max="30"> 
+
+            </div>
+
+            <div class="input-group">
+                <label for="buzz-divisor">Buzz Divisor</label>
+                <input type="number" id="buzz-divisor" value="20" min="1" max="30"> 
+
+            </div>
+
+            <button id="generate">Generate Matrix</button>
+
+
+
+        </div>
+
+        <div id="matrix-container"></div>
+
+
+
     </main>
 </body>
 </html>
